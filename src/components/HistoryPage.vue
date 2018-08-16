@@ -28,7 +28,7 @@
   						</div>
   					</li>
   					<li class="timeline-inverted animate-box fadeInUp animated-fast">
-  						<div class="timeline-badge" style="background-image:url(images/chave_01.png);"></div>
+  						<div class="timeline-badge" :style="{ backgroundImage:`url('${inicio}')` }"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Em 2010 começamos a namorar</h3>
@@ -42,7 +42,7 @@
   						</div>
   					</li>
   					<li class="animate-box animate-box fadeInUp animated-fast">
-  						<div class="timeline-badge" style="background-image:url(images/culinaria_01.jpg);"></div>
+  						<div class="timeline-badge" :style="{ backgroundImage:`url('${hopaholics}')` }"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Em 2011 criamos o HopAholics (uma de nossas maiores loucuras)</h3>
@@ -56,7 +56,7 @@
   						</div>
   					</li>
   					<li class="timeline-inverted fadeInUp animated-fast">
-  						<div class="timeline-badge" style="background-image:url(images/danca_01.jpg); background-position: left"></div>
+  						<div class="timeline-badge" :style="{ backgroundImage:`url('${primeirolar}')`,  }" style="background-position: left"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Juntamos nossas “malas” e fomos criar nosso primeiro lar na Pompeia</h3>
@@ -71,7 +71,7 @@
   					</li>
 
   					<li class="animate-box fadeInUp animated-fast">
-  						<div class="timeline-badge" style="background-image:url(images/corrida_02.jpg);"></div>
+  						<div class="timeline-badge" :style="{ backgroundImage:`url('${nossoap}')` }"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Nosso  apartamento próprio! Nosso lar!</h3>
@@ -86,7 +86,7 @@
   					</li>
 
   					<li class="timeline-inverted fadeInUp animated-fast">
-  						<div class="timeline-badge" style="background-image:url(images/aliancas_02.jpg);"></div>
+  						<div class="timeline-badge" :style="{ backgroundImage:`url('${noivado}')` }"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Ficamos noivos! E logo em breve, dia 9 de dezembro, estaremos casados!</h3>
@@ -112,7 +112,12 @@ export default {
   name: 'historypage',
   data() {
     return {
-      danca: require('@/assets/images/danca.jpg')
+      danca: require('@/assets/images/danca.jpg'),
+      inicio: require('@/assets/images/inicio.jpg'),
+      hopaholics: require('@/assets/images/hopaholics.jpg'),
+      nossoap: require('@/assets/images/nossoap.jpg'),
+      primeirolar: require('@/assets/images/primeirolar.jpg'),
+      noivado: require('@/assets/images/noivado.jpg')
     }
   }
 }

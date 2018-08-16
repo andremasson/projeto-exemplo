@@ -1,5 +1,5 @@
 <template>
-  <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image: url(images/convite.png); background-position: left bottom ;" data-stellar-background-ratio="0.5">
+  <header id="fh5co-header" class="fh5co-cover" role="banner" :style="{ backgroundImage:`url('${pageheadbackground}')`,  }" style="background-position: left bottom ;" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -30,7 +30,8 @@ export default {
   data() {
     return {
       names: 'Roger e Susana',
-      save_the_date_message: 'Save the date'
+      save_the_date_message: 'Save the date',
+      pageheadbackground: require('@/assets/images/head.jpg')
     }
   },
   mounted: function () {
