@@ -1,17 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home">
+    <pagehead></pagehead>
+    <couplepage></couplepage>
+    <eventpage></eventpage>
+    <historypage></historypage>
+    <!-- <confirmationpage></confirmationpage> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import pagehead from '@/components/PageHead.vue'
+import couplepage from '@/components/CouplePage.vue'
+import eventpage from '@/components/EventPage.vue'
+import historypage from '@/components/HistoryPage.vue'
+// import confirmationpage from '@/components/ConfirmationPage.vue'
 
 export default {
-  name: 'app',
+  name: 'home',
   components: {
-    HelloWorld
+    pagehead,
+    couplepage,
+    eventpage,
+    historypage,
+    // confirmationpage
   }
 }
 </script>

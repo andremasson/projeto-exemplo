@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 require('./assets/css/style.css')
 
+import '@/assets/js/simplyCountdown.js'
+
 new Vue({
   render: h => h(App)
 }).$mount('#app')
