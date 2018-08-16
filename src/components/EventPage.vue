@@ -47,12 +47,12 @@ export default {
   name: 'eventpage',
   data() {
     return {
-      start_time: '11:00',
-      end_time: '16:30',
-      day: 'Sábado, 09',
-      month: 'Setembro, 2017',
+      start_time: '15:00',
+      end_time: '23:59',
+      day: 'Domingo, 09',
+      month: 'Dezembro, 2018',
       open_calendar_message: 'agenda',
-      address: 'Jardim Aurélia - Rua Tabapuã, 838 - Itaim Bibi'
+      address: ' Meu Quintal Eventos - Rua Diana, 161 - Perdizes/SP'
     }
   }
 }

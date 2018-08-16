@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-require('./assets/css/style.css')
+require('./assets/css/app.css')
 
 import '@/assets/js/simplyCountdown.js'
 

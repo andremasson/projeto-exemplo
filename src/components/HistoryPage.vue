@@ -6,7 +6,7 @@
   			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box fadeInUp animated-fast">
   				<h2>A História de Nós Dois</h2>
   				<p>
-  					"Sou contra os noivados muito prolongados. Dão tempo às pessoas para se conhecerem melhor, o que não me parece aconselhável antes do casamento." (Oscar Wilde)
+  					Nossa história começa como muitas histórias de amor. Mas como toda história de amor, construímos um percurso que é só nosso!
   				</p>
   			</div>
   		</div>
@@ -14,11 +14,11 @@
   			<div class="col-md-12 col-md-offset-0">
   				<ul class="timeline animate-box fadeInUp animated-fast">
   					<li class="animate-box fadeInUp animated-fast">
-  						<div class="timeline-badge" style="background-image:url(images/quadro_01.jpg);"></div>
+  						<div class="timeline-badge" :style="{ backgroundImage: `url('${danca}')` }"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
-  								<h3 class="timeline-title">Começamos a Namorar</h3>
-  								<span class="date">30 de Maio, 2013</span>
+  								<h3 class="timeline-title">Dança… onde nos conhecemos e tudo começou.</h3>
+  								<span class="date">01 de janeiro, 200?</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -31,8 +31,8 @@
   						<div class="timeline-badge" style="background-image:url(images/chave_01.png);"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
-  								<h3 class="timeline-title">Nossa Primeira Casinha</h3>
-  								<span class="date">19 de fevereiro, 2014</span>
+  								<h3 class="timeline-title">Em 2010 começamos a namorar</h3>
+  								<span class="date">19 de fevereiro, 2010</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -45,8 +45,8 @@
   						<div class="timeline-badge" style="background-image:url(images/culinaria_01.jpg);"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
-  								<h3 class="timeline-title">Experimentos Culinários</h3>
-  								<span class="date">31 de agosto, 2014</span>
+  								<h3 class="timeline-title">Em 2011 criamos o HopAholics (uma de nossas maiores loucuras)</h3>
+  								<span class="date">31 de agosto, 2011</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -59,7 +59,7 @@
   						<div class="timeline-badge" style="background-image:url(images/danca_01.jpg); background-position: left"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
-  								<h3 class="timeline-title">Lindy Hop!!!</h3>
+  								<h3 class="timeline-title">Juntamos nossas “malas” e fomos criar nosso primeiro lar na Pompeia</h3>
   								<span class="date">8 de fevereiro, 2015</span>
   							</div>
   							<div class="timeline-body">
@@ -74,8 +74,8 @@
   						<div class="timeline-badge" style="background-image:url(images/corrida_02.jpg);"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
-  								<h3 class="timeline-title">Praticamente Atletas</h3>
-  								<span class="date">30 de outubro, 2016</span>
+  								<h3 class="timeline-title">Nosso  apartamento próprio! Nosso lar!</h3>
+  								<span class="date">01 de janeiro, 2017</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -89,8 +89,8 @@
   						<div class="timeline-badge" style="background-image:url(images/aliancas_02.jpg);"></div>
   						<div class="timeline-panel">
   							<div class="timeline-heading">
-  								<h3 class="timeline-title">E Finalmente</h3>
-  								<span class="date">Está chegando...</span>
+  								<h3 class="timeline-title">Ficamos noivos! E logo em breve, dia 9 de dezembro, estaremos casados!</h3>
+  								<span class="date">2018</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -112,6 +112,7 @@ export default {
   name: 'historypage',
   data() {
     return {
+      danca: require('@/assets/images/danca.jpg')
     }
   }
 }
