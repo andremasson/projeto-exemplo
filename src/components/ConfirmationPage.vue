@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div id="fh5co-started" class="fh5co-bg" style="">
   	<div class="overlay"></div>
@@ -29,35 +30,28 @@
   						<div class="col-md-4 col-sm-4">
   							<div class="form-group has-error has-feedback">
   								<label for="name" class="sr-only">Nome</label>
-  								{{input type="text" id='name' class="form-control" placeholder="Nome" value=name}}
+                  <input v-model="name" class="form-control" placeholder="Nome">
   								<span id="error_name" class="glyphicon glyphicon-remove form-control-feedback hide" aria-hidden="true"></span>
   							</div>
   						</div>
   						<div class="col-md-4 col-sm-4">
   							<div class="form-group">
   								<label for="email" class="sr-only">Email</label>
-  								{{input type="email" id='email' class="form-control" placeholder="Email" value=email}}
+                  <input v-model="email" class="form-control" placeholder="Email">
   							</div>
   						</div>
   						<div id="guests_fields">
-  							{{#each guestsFields as |guest index|}}
-  								<div class="col-md-4 col-sm-4 hide" >
-  									<div class="form-group">
-  										<label for="guests" class="sr-only">Convidados</label>
-  										{{input type="text" class="form-control" placeholder="Nome da(o) convidada(o)." value=guest.name}}
-  									</div>
-  								</div>
-  							{{/each}}
+
   						</div>
   						<div class="col-md-4 col-sm-4">
   							<div class="form-group">
-  								<button type="button" class="btn btn-default" {{action "AddGuest"}}>adicionar convidado</button>
+  								<button type="button" class="btn btn-default" v-on:click="adicionar">adicionar convidado</button>
   							</div>
   						</div>
   					</div>
   					<div class="row">
   						<div class="col-md-offset-5 col-sm-4">
-  							<button type="button" class="btn btn-primary btn-block" {{action "SaveRsvp"}}>confirmar</button>
+  							<button type="button" class="btn btn-primary btn-block" v-on:click="salvar">confirmar</button>
   						</div>
   					</div>
   				</form>
@@ -75,10 +69,10 @@
   			</div>
   			<div class="row">
   				<div class="col-md-6 text-center">
-  					<a href="http://www.camicado.com.br/weddinglist/products/60351316" target="_blank"><img style="width: 172px; height: 55px; border-width: 0; background: url(../images/sprite.png)  -1485px -950px;"></a>
+  					<a href="http://www.camicado.com.br/weddinglist/products/60351316" target="_blank"><img style="width: 172px; height: 55px; border-width: 0; background: url(../images/sprite.png)  -1485px -950px;">Camicado</a>
   				</div>
   				<div class="col-md-6 text-center">
-  					<a href="http://nossosite.fastshop.com.br/charleneeandre/productList" target="_blank"><img src="../images/logo_fast_site.jpg"></a>
+  					<a href="http://nossosite.fastshop.com.br/charleneeandre/productList" target="_blank">Fast</a>
   				</div>
   			</div>
   		</div>
@@ -94,6 +88,16 @@ export default {
   name: 'confirmationpage',
   data() {
     return {
+      name: "",
+      email: ""
+    }
+  },
+  methods: {
+    adicionar: function() {
+      console.log('Email: ' + this.email);
+    },
+    salvar: function() {
+      console.log('Nome: ' + this.name);
     }
   }
 }
