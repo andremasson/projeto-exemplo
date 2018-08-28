@@ -9,20 +9,6 @@
   				<p>Agora imagina a Sarinha pedindo e ajuda a gente a não deixar faltar bebida!!!</p>
   			</div>
   		</div>
-  		<div class="row animate-box fadeInUp animated-fast hide" id="confirmation-message">
-  			<div class="col-md-10 col-md-offset-1">
-  				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-  					<p>Contamos com sua presença no casamento!</p>
-  				</div>
-  			</div>
-  		</div>
-  		<div class="row animate-box fadeInUp animated-fast hide" id="confirmation-wait">
-  			<div class="col-md-10 col-md-offset-1">
-  				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-  					<p>Aguarde, enviando a confirmação...</p>
-  				</div>
-  			</div>
-  		</div>
   		<div class="row animate-box fadeInUp animated-fast" id="confirmation-form">
   			<div class="col-md-10 col-md-offset-1">
   				<form class="form-inline">
@@ -40,20 +26,18 @@
                   <input v-model="email" class="form-control" placeholder="Email">
   							</div>
   						</div>
-  						<div id="guests_fields">
+  						<div class="col-md-4 col-sm-4" id="guests_fields">
+                <div class="form-group">
+                  <label for="guests" class="sr-only">Vai trazer alguém?</label>
+                  <input v-model.number="guests" type="number" class="form-control" placeholder="Vai trazer alguém?">
+                </div>
+  						</div>
+  					</div>
 
-  						</div>
-  						<div class="col-md-4 col-sm-4">
-  							<div class="form-group">
-  								<button type="button" class="btn btn-default" v-on:click="adicionar">adicionar convidado</button>
-  							</div>
-  						</div>
-  					</div>
-  					<div class="row">
   						<div class="col-md-offset-5 col-sm-4">
-  							<button type="button" class="btn btn-primary btn-block" v-on:click="salvar">confirmar</button>
+  							<button type="button" class="btn btn-primary btn-block" v-on:click="save">confirmar</button>
   						</div>
-  					</div>
+
   				</form>
   			</div>
   		</div>
@@ -83,21 +67,23 @@
 </template>
 
 <script>
+import { db } from '../main'
+
 // @ is an alias to /src
 export default {
   name: 'confirmationpage',
   data() {
     return {
       name: "",
-      email: ""
+      email: "",
+      guests: ""
     }
   },
   methods: {
-    adicionar: function() {
-      console.log('Email: ' + this.email);
-    },
-    salvar: function() {
-      console.log('Nome: ' + this.name);
+    save: function() {
+      console.log('Nome: ' + this.name + ', email: ' + this.email + ', adicional: ' + this.guests);
+      const createdAt = new Date()
+      db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "email" : this.email, "createdAt" : createdAt})
     }
   }
 }

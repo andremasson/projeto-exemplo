@@ -40,7 +40,8 @@
       <couplepage></couplepage>
       <eventpage></eventpage>
       <historypage></historypage>
-       <confirmationpage></confirmationpage>
+      <confirmationpage></confirmationpage>
+      <displaydata></displaydata>
     </div>
 
   <footer id="fh5co-footer" role="contentinfo">
@@ -77,6 +78,7 @@ import couplepage from '@/components/CouplePage.vue'
 import eventpage from '@/components/EventPage.vue'
 import historypage from '@/components/HistoryPage.vue'
 import confirmationpage from '@/components/ConfirmationPage.vue'
+import displaydata from '@/components/DisplayData.vue'
 
 export default {
   name: 'home',
@@ -85,7 +87,8 @@ export default {
     couplepage,
     eventpage,
     historypage,
-    confirmationpage
+    confirmationpage,
+    displaydata
   }
 }
 </script>
