@@ -35,13 +35,13 @@
   		</div>
   	</nav>
 
+    <pagehead></pagehead>
+    <couplepage></couplepage>
+    <eventpage></eventpage>
+    <historypage></historypage>
+    <confirmationpage></confirmationpage>
+    <displaydata></displaydata>
     <div class="home">
-      <pagehead></pagehead>
-      <couplepage></couplepage>
-      <eventpage></eventpage>
-      <historypage></historypage>
-      <confirmationpage></confirmationpage>
-      <displaydata></displaydata>
     </div>
 
   <footer id="fh5co-footer" role="contentinfo">

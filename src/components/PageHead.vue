@@ -1,5 +1,5 @@
 <template>
-  <header id="fh5co-header" class="fh5co-cover" role="banner" :style="{ backgroundImage:`url('${pageheadbackground}')`,  }" style="background-position: left bottom ;" data-stellar-background-ratio="0.5">
+  <div id="fh5co-header" class="fh5co-cover" role="banner" :style="{ backgroundImage:`url('${pageheadbackground}')`,  }" style="background-position: left bottom ;" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>

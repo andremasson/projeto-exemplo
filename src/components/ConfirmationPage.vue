@@ -10,13 +10,13 @@
   			</div>
   		</div>
   		<div class="row animate-box fadeInUp animated-fast" id="confirmation-form">
-  			<div class="col-md-10 col-md-offset-1">
+  			<div class="col-md-12 col-md-offset-1">
   				<form class="form-inline">
   					<div class="row">
   						<div class="col-md-4 col-sm-4">
   							<div class="form-group has-error has-feedback">
-  								<label for="name" class="sr-only">Nome</label>
-                  <input v-model="name" class="form-control" placeholder="Nome">
+  								<label for="name" class="sr-only">Nome completo</label>
+                  <input v-model="name" class="form-control" placeholder="Nome completo">
   								<span id="error_name" class="glyphicon glyphicon-remove form-control-feedback hide" aria-hidden="true"></span>
   							</div>
   						</div>
@@ -29,15 +29,15 @@
   						<div class="col-md-4 col-sm-4" id="guests_fields">
                 <div class="form-group">
                   <label for="guests" class="sr-only">Vai trazer alguém?</label>
-                  <input v-model.number="guests" type="number" class="form-control" placeholder="Vai trazer alguém?">
+                  <input v-model.number="guests" type="number" class="form-control" placeholder="Quantos acompanhantes?">
                 </div>
   						</div>
   					</div>
-
-  						<div class="col-md-offset-5 col-sm-4">
+            <div class="row">
+  						<div class="col-md-offset-4">
   							<button type="button" class="btn btn-primary btn-block" v-on:click="save">confirmar</button>
   						</div>
-
+            </div>
   				</form>
   			</div>
   		</div>

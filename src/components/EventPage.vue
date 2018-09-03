@@ -28,8 +28,8 @@
   									{{address}}
   								</p>
   								<p>
-  									<a class="btn btn-info" href="https://goo.gl/maps/3K38AAg3A6Q2" target="_blank"><i class="icon-map"></i> Veja o mapa</a>
-  									<a class="btn btn-info" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=bzJlbTN0MDdxcDZwaGF1Y2hhYWhybHBvZjggbWFzc29uLmFuZHJlQG0&amp;tmsrc=masson.andre%40gmail.com"><i class="icon-calendar"></i> Salve na agenda</a>
+  									<a class="btn btn-info" href="https://goo.gl/maps/KMTjxtKZpRs" target="_blank"><i class="icon-map"></i> Veja o mapa</a>
+  									<a class="btn btn-info" target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=N2Q3ZDhrazM1bWZndWhoMzdlMWNxNjMzYzUgbWFzc29uLmFuZHJlQG0&tmsrc=masson.andre%40gmail.com"><i class="icon-calendar"></i> Salve na agenda</a>
   								</p>
   							</div>
   						</div>
