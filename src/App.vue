@@ -8,46 +8,6 @@
       <a href="#" v-scroll-to="'#fh5co-couple-story'">história</a>
       <a href="#" v-scroll-to="'#fh5co-started'">rsvp</a>
     </Slide>
-    
-<!--
-    <b-navbar  class="fh5co-nav" toggleable>
-      <div class="container">
-        <div class="row text-right">
-            <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
-
-            <b-collapse is-nav id="nav_dropdown_collapse">
-              <b-navbar-nav >
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-header'">inicio</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-couple'">sobre nós</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-event'">cerimônia</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-couple-story'">história</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-started'">rsvp</b-nav-item>
-                  </li>
-                </ul>
-              </b-navbar-nav>
-            </b-collapse>
-        </div>
-      </div>
-    </b-navbar>
--->
 
   	<nav id="full-nav" class="fh5co-nav" role="navigation" toggleable>
   		<div class="container">
@@ -77,7 +37,6 @@
   			</div>
   		</div>
   	</nav>
-
 
     <pagehead></pagehead>
     <couplepage></couplepage>
