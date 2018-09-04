@@ -4,6 +4,8 @@ import BootstrapVue from 'bootstrap-vue'
 import VueFire from 'vuefire'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import VueScrollTo from 'vue-scrollto'
+import BackToTop from 'vue-backtotop'
 
 Vue.config.productionTip = false
 
@@ -21,6 +23,9 @@ firebase.initializeApp({
   databseURL: 'https://site-susanaroger.firebaseio.com',
   timestampsInSnapshots: true
 })
+
+Vue.use(VueScrollTo)
+Vue.use(BackToTop)
 
 export const db = firebase.firestore()
 

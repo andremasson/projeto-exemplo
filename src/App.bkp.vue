@@ -1,55 +1,30 @@
 <template>
   <div id="page">
+  	<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>
+    <div id="fh5co-offcanvas">
+  		<div style="text-transform: uppercase;">
 
-    <Slide id="collapse-nav" right>
-      <a href="#" v-scroll-to="'#fh5co-header'">inicio</a>
-      <a href="#" v-scroll-to="'#fh5co-couple'">sobre nós</a>
-      <a href="#" v-scroll-to="'#fh5co-event'">cerimônia</a>
-      <a href="#" v-scroll-to="'#fh5co-couple-story'">história</a>
-      <a href="#" v-scroll-to="'#fh5co-started'">rsvp</a>
-    </Slide>
-    
-<!--
-    <b-navbar  class="fh5co-nav" toggleable>
-      <div class="container">
-        <div class="row text-right">
-            <b-navbar-toggle target="nav_dropdown_collapse"></b-navbar-toggle>
+  			<ul>
+          <li class="js-fh5co-nav-toggle">
+            <a href="#" v-scrool-to"'#fh5co-header'">inicio</a>
+          </li>
+          <li class="js-fh5co-nav-toggle">
+            <a href="#" v-scrool-to"'#fh5co-couple'">sobre nós</a>
+          </li>
+          <li class="js-fh5co-nav-toggle">
+            <a href="#" v-scrool-to"'#fh5co-event'">cerimônia</a>
+          </li>
+          <li class="js-fh5co-nav-toggle">
+            <a href="#" v-scrool-to"'#fh5co-couple-story'">história</a>
+          </li>
+          <li class="js-fh5co-nav-toggle">
+            <a href="#" v-scrool-to"'#fh5co-started'">rsvp</a>
+          </li>
+  			</ul>
 
-            <b-collapse is-nav id="nav_dropdown_collapse">
-              <b-navbar-nav >
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-header'">inicio</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-couple'">sobre nós</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-event'">cerimônia</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-couple-story'">história</b-nav-item>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <b-nav-item href="#" v-scroll-to="'#fh5co-started'">rsvp</b-nav-item>
-                  </li>
-                </ul>
-              </b-navbar-nav>
-            </b-collapse>
-        </div>
-      </div>
-    </b-navbar>
--->
-
-  	<nav id="full-nav" class="fh5co-nav" role="navigation" toggleable>
+  		</div>
+  	</div>
+  	<nav class="fh5co-nav" role="navigation" toggleable>
   		<div class="container">
   			<div class="row">
   				<div class="col-xs-2">
@@ -77,7 +52,6 @@
   			</div>
   		</div>
   	</nav>
-
 
     <pagehead></pagehead>
     <couplepage></couplepage>
@@ -111,7 +85,12 @@
         </a>
       </div>
     </back-to-top>
-
+    <!--
+    <div class="gototop js-top">
+      <a href="#" v-scroll-to="'#fh5co-header'">
+      </a>
+  	</div>
+    -->
   </div>
 
 </template>
@@ -125,8 +104,6 @@ import historypage from '@/components/HistoryPage.vue'
 import confirmationpage from '@/components/ConfirmationPage.vue'
 import displaydata from '@/components/DisplayData.vue'
 import VueScrollTo from 'vue-scrollto'
-import { Slide } from 'vue-burger-menu'
-
 
 export default {
   name: 'home',
@@ -136,12 +113,26 @@ export default {
     eventpage,
     historypage,
     confirmationpage,
-    displaydata,
-    Slide
+    displaydata
+  },
+  methods: {
+    displayGotoTop: function() {
+      console.log("VOLTAR...")
+    }
+  },
+  mounted: function() {
+    console.log("Montada.")
   }
 }
 </script>
 
 <style>
-
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

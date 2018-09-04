@@ -29,6 +29,17 @@ body {
   background: #fff;
 }
 
+.bm-burger-button {
+  z-index: 1;
+}
+.bm-item-list a {
+  text-transform: uppercase;
+}
+
+.text-right {
+  margin-left: auto;
+}
+
 #page {
   position: relative;
   overflow: hidden;
@@ -81,6 +92,12 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 @media (min-width: 992px)
+#full-nav {
+  display: contents;
+}
+#collapse-nav {
+  display: none;
+}
 .row {
   margin-left: auto;
 }
@@ -113,6 +130,12 @@ h1, h2, h3, h4, h5, h6, figure {
   z-index: 1001;
 }
 @media screen and (max-width: 768px) {
+  #full-nav {
+    display: none;
+  }
+  #collapse-nav {
+    display: contents;
+  }
   .col-md-offset-2 {
     margin-left: auto;
   }
@@ -1584,8 +1607,7 @@ form label {
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  opacity: 0;
-  visibility: hidden;
+
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;

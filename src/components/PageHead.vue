@@ -10,8 +10,9 @@
 
               <div class="simply-countdown simply-countdown-one" id="simply-countdown"></div>
               <p>
-                <b-button class="btn btn-default btn-sm">{{ save_the_date_message }}</b-button>
-                <!-- {{scroll-to label=save_the_date_message href='#fh5co-event' class="btn btn-default btn-sm"}} -->
+                <b-button class="btn btn-default btn-sm">
+                  <a href="#" v-scroll-to="'#fh5co-event'">{{ save_the_date_message }}</a>
+                </b-button>
               </p>
             </div>
           </div>
