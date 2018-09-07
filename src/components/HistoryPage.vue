@@ -32,7 +32,7 @@
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Em 2010 começamos a namorar</h3>
-  								<span class="date">19 de fevereiro, 2010</span>
+  								<span class="date">28 de fevereiro, 2010</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -60,7 +60,7 @@
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Juntamos nossas “malas” e fomos criar nosso primeiro lar na Pompeia</h3>
-  								<span class="date">8 de fevereiro, 2015</span>
+  								<span class="date">01 de janeiro, 2015</span>
   							</div>
   							<div class="timeline-body">
   								<p>
@@ -90,7 +90,7 @@
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Ficamos noivos! E logo em breve, dia 9 de dezembro, estaremos casados!</h3>
-  								<span class="date">2018</span>
+  								<span class="date">28 de fevereiro, 2018</span>
   							</div>
   							<div class="timeline-body">
   								<p>
