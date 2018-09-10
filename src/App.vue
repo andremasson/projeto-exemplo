@@ -43,7 +43,6 @@
     <eventpage></eventpage>
     <historypage></historypage>
     <confirmationpage></confirmationpage>
-    <displaydata></displaydata>
     <div class="home">
     </div>
 
