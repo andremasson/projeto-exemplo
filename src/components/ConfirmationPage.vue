@@ -63,7 +63,7 @@
         </b-form-select>
       </div>
     </b-modal>
-    <b-modal ref="modalerror" size="sm" ok-only title="Erro">
+    <b-modal ref="modalerror" size="sm" ok-only title="Ops...">
       Por favor complete todas as informações.
     </b-modal>
     <b-modal ref="confirmation" size="sm" ok-only title="Obrigado!">

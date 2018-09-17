@@ -10,11 +10,13 @@
   				</p>
   			</div>
   		</div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase3}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Drinks em Whistler<br/>(CAD 27,00 / R$ 80,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$40</p>
+      <div v-for="(item, index) in list">
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" v-bind:class="[(index % 2 === 0)?'order-lg-2':'']" :style="{ backgroundImage: `url('${item.image}')` }"></div>
+          <div class="col-lg-6 my-auto showcase-text" v-bind:class="[(index % 2 === 0)?'order-lg-1':'']">
+            <h2>{{item.title}}<br/>{{item.value}}</h2>
+            <p class="lead mb-0">Clique aqui se quiser colaborar com {{item.contribute}}</p>
+          </div>
         </div>
       </div>
       <div class="row no-gutters">
@@ -22,83 +24,6 @@
         <div class="col-lg-6 my-auto showcase-text">
           <h2>VanDusen Festival of Lights<br/>(CAD 38,00 ou R$ 114,00)</h2>
           <p class="lead mb-0">Clique aqui se quiser colaborar com R$57</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase1}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Ice Skating in Whistler<br/>(CAD 50,00 ou R$ 150,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$75</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase2}')` }"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Jantar no Shabusen Yakiniku<br/>(CAD 70,00 ou R$ 210,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$105</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase1}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Brunch  no Purebread<br/>(CAD 80,00 / R$ 240,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$120</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase2}')` }"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Capilano Suspension Bridge park<br/>(CAD 94,00 ou R$ 282,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$141</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase1}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Peak 2 Peak Gondola<br/>(CAD 110,00 / R$ 330,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$165</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase2}')` }"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Jantar romântico<br/>(CAD 150,00 / R$ 450,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$225</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase1}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Scandinave Spa Whistler<br/>(CAD 158,00 ou R$ 474,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$237</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase2}')` }"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Esquiar<br/>(CAD 160,00 / R$ 480,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$240</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase1}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Diária do Blackcomb Lodge<br/>(CAD 167,00 / R$ 500,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$250</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase2}')` }"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Super Fly - Zipline & treetop adventures<br/>(CAD 180,00 / R$ 540,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$270</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" :style="{ backgroundImage: `url('${images.showcase1}')` }"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Passagens aéreas<br/>(R$ 4145,00)</h2>
-          <p class="lead mb-0">Clique aqui se quiser colaborar com R$2072</p>
         </div>
       </div>
     </div>
@@ -113,6 +38,86 @@ export default {
   },
   data() {
         return {
+            list: [
+              {
+                title: "Drinks em Whistler",
+                value: "(CAD 27,00 / R$ 80,00)",
+                contribute: "R$40",
+                image: require('@/assets/images/danca.jpg')
+              },
+              {
+                title: "VanDusen Festival of Lights",
+                value: "(CAD 38,00 ou R$ 114,00)",
+                contribute: "R$57",
+                image: require('@/assets/images/inicio.jpg')
+              },
+              {
+                title: "Ice Skating in Whistler",
+                value: "(CAD 50,00 ou R$ 150,00)",
+                contribute: "R$75",
+                image: require('@/assets/images/hopaholics.jpg')
+              },
+              {
+                title: "Jantar no Shabusen Yakiniku",
+                value: "(CAD 70,00 ou R$ 210,00)",
+                contribute: "R$105",
+                image: require('@/assets/images/danca.jpg')
+              },
+              {
+                title: "Brunch  no Purebread",
+                value: "(CAD 80,00 / R$ 240,00)",
+                contribute: "R$120",
+                image: require('@/assets/images/inicio.jpg')
+              },
+              {
+                title: "Capilano Suspension Bridge park",
+                value: "(CAD 94,00 ou R$ 282,00)",
+                contribute: "R$141",
+                image: require('@/assets/images/hopaholics.jpg')
+              },
+              {
+                title: "Peak 2 Peak Gondola",
+                value: "(CAD 110,00 / R$ 330,00)",
+                contribute: "R$165",
+                image: require('@/assets/images/danca.jpg')
+              },
+              {
+                title: "Jantar romântico",
+                value: "(CAD 150,00 / R$ 450,00)",
+                contribute: "R$225",
+                image: require('@/assets/images/inicio.jpg')
+              },
+              {
+                title: "Scandinave Spa Whistler",
+                value: "(CAD 158,00 ou R$ 474,00)",
+                contribute: "R$237",
+                image: require('@/assets/images/hopaholics.jpg')
+              },
+              {
+                title: "Esquiar",
+                value: "(CAD 160,00 / R$ 480,00)",
+                contribute: "R$240",
+                image: require('@/assets/images/danca.jpg')
+              },
+              {
+                title: "Diária do Blackcomb Lodge",
+                value: "(CAD 167,00 / R$ 500,00)",
+                contribute: "R$250",
+                image: require('@/assets/images/inicio.jpg')
+              },
+              {
+                title: "Super Fly - Zipline & treetop adventures",
+                value: "(CAD 180,00 / R$ 540,00)",
+                contribute: "R$270",
+                image: require('@/assets/images/hopaholics.jpg')
+              },
+              {
+                title: "Passagens aéreas",
+                value: "(R$ 4145,00)",
+                contribute: "R$2072",
+                image: require('@/assets/images/danca.jpg')
+              }
+            ],
             images: {
                 showcase1: require('@/assets/images/danca.jpg'),
                 showcase2: require('@/assets/images/inicio.jpg'),
