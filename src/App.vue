@@ -7,13 +7,13 @@
       <a href="#" v-scroll-to="'#fh5co-event'">cerimônia</a>
       <a href="#" v-scroll-to="'#fh5co-couple-story'">história</a>
       <a href="#" v-scroll-to="'#fh5co-started'">rsvp</a>
+      <a href="#" v-scroll-to="'#fh5co-cotas'">Lua de Mel</a>
     </Slide>
 
   	<nav id="full-nav" class="fh5co-nav" role="navigation" toggleable>
   		<div class="container">
   			<div class="row">
   				<div class="col-xs-2">
-
   				</div>
   				<div class="col-xs-10 text-right menu-1">
   					<ul>
@@ -32,6 +32,9 @@
               <li>
                 <a href="#" v-scroll-to="'#fh5co-started'">rsvp</a>
               </li>
+              <li>
+                <a href="#" v-scroll-to="'#fh5co-cotas'">Lua de Mel</a>
+              </li>
   					</ul>
   				</div>
   			</div>
@@ -43,10 +46,9 @@
     <eventpage></eventpage>
     <historypage></historypage>
     <confirmationpage></confirmationpage>
-    <div class="home">
-    </div>
+    <giftlistpage></giftlistpage>
 
-  <footer id="fh5co-footer" role="contentinfo">
+    <footer id="fh5co-footer" role="contentinfo">
   		<div class="container">
 
   			<div class="row copyright">
@@ -64,7 +66,7 @@
 
     <back-to-top text="Back to top">
       <div class="gototop">
-        <a href="#" v-on:click="displayGotoTop">
+        <a href="#">
           <i class="icon-arrow-up"></i>
         </a>
       </div>
@@ -82,9 +84,9 @@ import eventpage from '@/components/EventPage.vue'
 import historypage from '@/components/HistoryPage.vue'
 import confirmationpage from '@/components/ConfirmationPage.vue'
 import displaydata from '@/components/DisplayData.vue'
+import giftlistpage from '@/components/GiftsPage.vue'
 import VueScrollTo from 'vue-scrollto'
 import { Slide } from 'vue-burger-menu'
-
 
 export default {
   name: 'home',
@@ -94,6 +96,7 @@ export default {
     eventpage,
     historypage,
     confirmationpage,
+    giftlistpage,
     displaydata,
     Slide
   }
