@@ -100,7 +100,7 @@ export default {
       console.log("Guests: " + this.guests)
       const createdAt = new Date()
       if (!this.guests || this.guests < 0) this.guests = 0;
-      //db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "email" : this.email, "createdAt" : createdAt})
+      db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "email" : this.email, "createdAt" : createdAt})
       this.$refs.confirmation.show()
       this.confirmationok = true
     }
