@@ -43,10 +43,8 @@
   		</div>
   	</div>
 
-    <!-- the modal -->
     <b-modal ref="modalsm" size="sm" @ok="save" ok-only title="Vai trazer alguém?">
-
-      <div >
+      <div>
         <b-form-select v-model="guests" class="btn btn-primary dropdown">
           <option value="-1" selected="selected" disabled hidden>Quantas pessoas?</option>
           <option class="dropdown-item" value="0">Apenas eu</option>
@@ -97,7 +95,6 @@ export default {
       }
     },
     save: function() {
-      console.log("Guests: " + this.guests)
       const createdAt = new Date()
       if (!this.guests || this.guests < 0) this.guests = 0;
       db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "email" : this.email, "createdAt" : createdAt})
