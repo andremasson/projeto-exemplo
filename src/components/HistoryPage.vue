@@ -18,7 +18,7 @@
   						<div class="timeline-panel">
   							<div class="timeline-heading">
   								<h3 class="timeline-title">Dança… onde nos conhecemos e tudo começou.</h3>
-  								<span class="date">01 de janeiro, 200?</span>
+  								<span class="date">01 de janeiro, 2009</span>
   							</div>
   							<div class="timeline-body">
   								<p>

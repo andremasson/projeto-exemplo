@@ -44,7 +44,7 @@
           </b-col>
         </b-row>
         <br/>
-        <p>Nos fale também quem é você...</p>
+        <p>Nos fale também quem é você para que possamos agradecer!</p>
         <div class="form-group has-feedback">
           <label for="name" class="sr-only">Nome completo</label>
           <input v-model="name" class="form-control" placeholder="Nome completo">
@@ -56,7 +56,7 @@
       </b-modal>
 
       <b-modal ref="confirmation" size="sm" ok-only title="Obrigado!">
-        Presentinho daora!
+        <p>Com certeza aproveitaremos muito seu presente! Esperamos você na festa!</p>
       </b-modal>
 
       <b-modal ref="error" size="sm" ok-only title="Ops...">
@@ -211,7 +211,9 @@ export default {
 }
 
 .showcase .row {
+  width: -moz-available;
   width: -webkit-fill-available;
+  width: 100%;
 }
 
 @media (max-width: 767px) {

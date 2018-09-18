@@ -18,7 +18,7 @@
               “When I look at you, I can feel it. I look at you and I’m home.”
               <br/><br/>
               Compartilhar a vida com ele é mais que fazer muitas viagens, experimentar muitas coisas, é encontrar em seus abraços, em sua companhia... meu lar!
-              Temos um plano bem simples… ficar juntos pro resto da vida!
+              Um desejo? Sermos sempre um porto seguro!
             </p>
 					</div>
 				</div>
@@ -28,7 +28,7 @@
 						<img :src="groom" alt="groom" class="img-responsive">
 					</div>
 					<div class="desc-groom">
-						<h3>Roger Batista</h3>
+						<h3>Roger Ferreira Batista</h3>
 						<p>
               Recentemente decidi uma das coisas mais importantes da minha vida. Eu pedi a Su em casamento. E ela disse SIMMM!
               <br/><br/>

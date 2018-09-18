@@ -43,8 +43,8 @@
   		</div>
   	</div>
 
-    <b-modal ref="modalsm" size="sm" @ok="save" ok-only title="Vai trazer alguém?">
-      <div>
+    <b-modal ref="modalsm" size="lg" @ok="save" ok-only title="Vem acompanhado(a)?">
+
         <b-form-select v-model="guests" class="btn btn-primary dropdown">
           <option value="-1" selected="selected" disabled hidden>Quantas pessoas?</option>
           <option class="dropdown-item" value="0">Apenas eu</option>
@@ -59,7 +59,12 @@
           <option class="dropdown-item" value="9">9</option>
           <option class="dropdown-item" value="10">10</option>
         </b-form-select>
-      </div>
+        <div v-for="(field, index) in guestsFields">
+          <div class="form-group">
+            <label for="name" class="sr-only">Nome completo</label>
+            <input v-model="guestsNames[index]" class=" guest-input" placeholder="Nome completo">
+          </div>
+        </div>
     </b-modal>
     <b-modal ref="modalerror" size="sm" ok-only title="Ops...">
       Por favor complete todas as informações.
@@ -82,7 +87,14 @@ export default {
       confirmationok: false,
       name: "",
       email: "",
-      guests: "-1"
+      guests: "-1",
+      guestsNames: []
+    }
+  },
+  computed: {
+    guestsFields: function() {
+      this.guestsNames.length = (this.guests >= 0)?this.guests:0
+      return this.guestsNames
     }
   },
   methods: {
@@ -97,7 +109,7 @@ export default {
     save: function() {
       const createdAt = new Date()
       if (!this.guests || this.guests < 0) this.guests = 0;
-      db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "email" : this.email, "createdAt" : createdAt})
+      db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "guests_names" : this.guestsNames, "email" : this.email, "createdAt" : createdAt})
       this.$refs.confirmation.show()
       this.confirmationok = true
     }
@@ -108,6 +120,19 @@ export default {
 <style scoped lang="css">
 .dropdown {
   color: #fff;
+}
+
+.guest-input {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: #495057;
+  background: rgba(255, 255, 255, 0.2);
+  height: 54px;
+  font-size: 18px;
+  font-weight: 300;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 0.25rem;
 }
 
 .dropdown-item {

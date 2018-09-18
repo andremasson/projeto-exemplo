@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       start_time: '15:00',
-      end_time: '23:59',
+      end_time: '21:00',
       day: 'Domingo, 09',
       month: 'Dezembro, 2018',
       open_calendar_message: 'agenda',
