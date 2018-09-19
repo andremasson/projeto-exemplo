@@ -5,7 +5,7 @@
     <br/>
     <ul>
       <li v-for="item in rsvp">
-        {{ item.nome }} + {{ item.adicional }}
+        {{ item.nome }}
       </li>
     </ul>
     <br/>
@@ -26,7 +26,7 @@ export default {
   },
   firestore () {
     return {
-      rsvp: db.collection('rsvp').orderBy('nome')
+      rsvp: db.collection('dados').orderBy('nome')
     }
   }
 }

@@ -5,13 +5,13 @@
   	<div class="container">
   		<div class="row animate-box fadeInUp animated-fast">
   			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-  				<h2>Sua presença é essencial! Nos ajude a organizar melhor a festa e confirme que estará lá para celebrar conosco!</h2>
+  				<h2>Faça a confirmação aqui</h2>
   				<p></p>
   			</div>
   		</div>
       <div id="confirmed" v-if="confirmationok">
         <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-          <p>Obrigado por confirmar sua presença!</p>
+          <p>Obrigado por confirmar!</p>
         </div>
       </div>
   		<div class="row animate-box fadeInUp animated-fast" id="confirmation-form" v-else>
@@ -109,7 +109,7 @@ export default {
     save: function() {
       const createdAt = new Date()
       if (!this.guests || this.guests < 0) this.guests = 0;
-      db.collection('rsvp').add({"nome" : this.name, adicional : this.guests, "guests_names" : this.guestsNames, "email" : this.email, "createdAt" : createdAt})
+      db.collection('dados').add({"nome" : this.name, adicional : this.guests, "guests_names" : this.guestsNames, "email" : this.email, "createdAt" : createdAt})
       this.$refs.confirmation.show()
       this.confirmationok = true
     }

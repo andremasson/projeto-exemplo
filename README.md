@@ -1,4 +1,4 @@
-# casamento-suroger-vue
+# projeto-exemplo-vue
 
 ## Project setup
 ```

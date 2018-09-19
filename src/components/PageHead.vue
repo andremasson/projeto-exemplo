@@ -30,7 +30,7 @@ export default {
   name: 'pagehead',
   data() {
     return {
-      names: 'Roger e Susana',
+      names: 'Projeto Exemplo',
       save_the_date_message: 'Save the date',
       pageheadbackground: require('@/assets/images/head.jpg')
     }
