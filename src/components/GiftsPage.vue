@@ -53,6 +53,12 @@
           <label for="email" class="sr-only">Email</label>
           <input v-model="email" class="form-control" placeholder="Email">
         </div>
+        <br/>
+        <p>Se quiser, deixe aqui uma mensagem para nós!</p>
+        <div class="form-group has-feedback">
+          <label for="name" class="sr-only">Nome completo</label>
+          <textarea v-model="mensagem" class="form-control" placeholder="Sua mensagem ;) [Opcional]"></textarea>
+        </div>
       </b-modal>
 
       <b-modal ref="confirmation" size="sm" ok-only title="Obrigado!">
@@ -88,7 +94,7 @@ export default {
       else
       {
         const createdAt = new Date()
-        db.collection('presentes').add({"nome" : this.name, "email" : this.email, "titulo" : this.tituloPresente, "valor" : this.valorPresente, "createdAt" : createdAt})
+        db.collection('presentes').add({"nome" : this.name, "email" : this.email, "titulo" : this.tituloPresente, "mensagem" : this.mensagem, "valor" : this.valorPresente, "createdAt" : createdAt})
         this.$refs.confirmation.show()
       }
     }
@@ -100,6 +106,7 @@ export default {
         email: "",
         tituloPresente: "",
         valorPresente: "",
+        mensagem: "",
         list: [
           {
             title: "Drinks em Whistler",
