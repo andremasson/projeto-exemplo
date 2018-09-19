@@ -33,7 +33,7 @@
                 <a href="#" v-scroll-to="'#fh5co-started'">rsvp</a>
               </li>
               <li>
-                <a href="#" v-on:click="fixScroll()">Lua de Mel</a>
+                <a href="#" v-scroll-to="'#fh5co-cotas'">Lua de Mel</a>
               </li>
   					</ul>
   				</div>
@@ -103,15 +103,6 @@ export default {
     giftlistpagetarget,
     displaydata,
     Slide
-  },
-  created: function() {
-  },
-  methods: {
-    fixScroll: function() {
-      //v-scroll-to="'#fh5co-cotas'"
-      console.log("FIX?");
-      VueScrollTo.scrollTo("#fh5co-cotas")
-    }
   }
 }
 </script>
