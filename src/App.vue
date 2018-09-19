@@ -33,7 +33,7 @@
                 <a href="#" v-scroll-to="'#fh5co-started'">rsvp</a>
               </li>
               <li>
-                <a href="#" v-scroll-to="'#fh5co-cotas'">Lua de Mel</a>
+                <a href="#" v-on:click="fixScroll()">Lua de Mel</a>
               </li>
   					</ul>
   				</div>
@@ -41,12 +41,14 @@
   		</div>
   	</nav>
 
-    <pagehead></pagehead>
-    <couplepage></couplepage>
-    <eventpage></eventpage>
-    <historypage></historypage>
-    <confirmationpage></confirmationpage>
-    <giftlistpage></giftlistpage>
+      <pagehead></pagehead>
+      <couplepage></couplepage>
+      <eventpage></eventpage>
+      <historypage></historypage>
+      <confirmationpage></confirmationpage>
+      <giftlistpagetarget></giftlistpagetarget>
+      <giftlistpage></giftlistpage>
+
 
     <footer id="fh5co-footer" role="contentinfo">
   		<div class="container">
@@ -85,8 +87,9 @@ import historypage from '@/components/HistoryPage.vue'
 import confirmationpage from '@/components/ConfirmationPage.vue'
 import displaydata from '@/components/DisplayData.vue'
 import giftlistpage from '@/components/GiftsPage.vue'
-import VueScrollTo from 'vue-scrollto'
+import giftlistpagetarget from '@/components/GiftsPageTarget.vue'
 import { Slide } from 'vue-burger-menu'
+var VueScrollTo = require('vue-scrollto')
 
 export default {
   name: 'home',
@@ -97,8 +100,18 @@ export default {
     historypage,
     confirmationpage,
     giftlistpage,
+    giftlistpagetarget,
     displaydata,
     Slide
+  },
+  created: function() {
+  },
+  methods: {
+    fixScroll: function() {
+      //v-scroll-to="'#fh5co-cotas'"
+      console.log("FIX?");
+      VueScrollTo.scrollTo("#fh5co-cotas")
+    }
   }
 }
 </script>

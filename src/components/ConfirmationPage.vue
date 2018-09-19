@@ -1,6 +1,6 @@
 /* eslint-disable */
 <template>
-  <div id="fh5co-started" class="fh5co-bg" style="">
+  <div id="fh5co-started" class="fh5co-bg">
   	<div class="overlay"></div>
   	<div class="container">
   		<div class="row animate-box fadeInUp animated-fast">

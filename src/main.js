@@ -14,7 +14,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue);
 
 import './assets/css/app.css'
-require('./assets/css/app.css')
+//require('./assets/css/app.css')
 import '@/assets/js/simplyCountdown.js'
 
 Vue.use(VueFire)

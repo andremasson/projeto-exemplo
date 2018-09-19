@@ -1,5 +1,5 @@
 <template>
-  <div id="fh5co-cotas">
+  <div id="fh5co-cotas" class="fh5co-cotas">
     <div class="overlay"></div>
       <div class="container-fluid p-0 showcase">
         <div class="row" id="title-row">
@@ -186,12 +186,7 @@ export default {
             contribute: "R$2072",
             image: require('@/assets/images/13.jpg')
           }
-        ],
-        images: {
-            showcase1: require('@/assets/images/danca.jpg'),
-            showcase2: require('@/assets/images/inicio.jpg'),
-            showcase3: require('@/assets/images/hopaholics.jpg')
-        }
+        ]
       }
     }
 }
