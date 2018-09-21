@@ -1,5 +1,5 @@
 <template>
-  <div id="fh5co-header" class="fh5co-cover" role="banner" :style="{ backgroundImage:`url('${pageheadbackground}')`,  }"  data-stellar-background-ratio="0.5">
+  <div id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -32,7 +32,6 @@ export default {
     return {
       names: 'Projeto Exemplo',
       save_the_date_message: 'Save the date',
-      pageheadbackground: require('@/assets/images/head.jpg')
     }
   },
   mounted: function () {
